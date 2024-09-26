@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>My Dolares</title>
+</head>
+
+<body>
+    <img src="./my-dolar.gif" alt="Gif de dólares">
+    <h1>My Dolares</h1>
+
+    <div>
+        <input id="reais" type="number" placeholder="Valor em reais">
+        <input id="dolar" type="number" placeholder="Valor do dólar">
+
+        <p class="valor">$ 0</p>
+
+        <button onclick="calcularDolar()">Converter</button>
+    </div>
+
+</body>
+
+<script>
+    function calcularDolar(){
+        let real = parseFloat(document.getElementById("reais").value); // Variável guarda valor do real digitado
+        let dolar = parseFloat(document.getElementById("dolar").value); // Variável guarda valor do dólar digitado
+
+        if (isNaN(real) || isNaN(dolar) || dolar === 0) {
+            document.querySelector(".valor").innerHTML = "Por favor, insira valores válidos.";
+            return;
+        }
+
+        let resultado = real / dolar; // Variável guarda o valor do resultado
+        document.querySelector(".valor").innerHTML = "$ " + resultado.toFixed(2); // Exibir o resultado com duas casas decimais
+    }
+</script>
+
+</html>

@@ -1,0 +1,68 @@
+html, body {
+    height: 100%;
+    overflow: hidden;
+}
+
+img {
+    width: 54%;
+}
+body {
+    text-align: center;
+    background-color: #323232;
+}
+
+h1 {
+    color: green;
+    font-size: 50px;
+}
+
+input {
+    height: 36px;
+    width: 158px;
+    border: none;
+    border-radius: 10px;
+    transition: transform 0.5s;
+}
+
+#reais {
+    border: 3px solid green;
+    font-weight: bold;
+}
+
+#dolar {
+    border: 3px solid red;
+    font-weight: bold;
+}
+
+input::placeholder {
+    color: #000000;
+    padding: 5px;
+}
+
+p {
+    font-weight: bold;
+    font-size: 25px;
+    color: #ffffff;
+}
+
+button {
+    font-size: 20px;
+    cursor: pointer;
+    width: 140px;
+    height: 40px;
+    border-radius: 7px;
+    border: none;
+    transition: transform 0.5s;
+    
+}
+
+button:hover {
+    transform: scale(1.05);
+    border: 3px solid blue;
+    background: #323232;
+    color: #ffffff;
+}
+
+input:hover {
+    transform: scale(1.03);
+}
